@@ -1,6 +1,7 @@
 package com.github.model;
 
 
+import com.github.base.BaseModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,12 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "books")
-public class Book implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "book_id")
-    private Integer id;
-
+public class Book extends BaseModel<Integer> implements Serializable {
     private String title;
 
     @Column(name = "number_of_pages")

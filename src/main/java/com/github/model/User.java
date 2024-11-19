@@ -1,8 +1,10 @@
 package com.github.model;
 
+import com.github.base.BaseModel;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,11 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-public class User{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
+public class User extends BaseModel<Integer> implements Serializable {
     private String firstName;
 
     private String lastName;

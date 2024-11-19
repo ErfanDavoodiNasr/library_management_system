@@ -1,6 +1,6 @@
-package com.github.model;
+package com.github.base;
 
-import com.github.base.BaseModel;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,12 +8,13 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
+@MappedSuperclass
 @SuperBuilder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "categories")
-public class Category extends BaseModel<Integer>  implements Serializable {
-    private String title;
+public class BaseModel<T extends Serializable>{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private T id;
 }

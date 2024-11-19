@@ -1,5 +1,6 @@
 package com.github.model;
 
+import com.github.base.BaseModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,11 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "subjects")
-public class Subject implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
+public class Subject extends BaseModel<Integer>  implements Serializable {
     private String title;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
