@@ -30,6 +30,6 @@ public class Book extends BaseModel<Integer> implements Serializable {
 
     private String publisher;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Subject subject;
 }
