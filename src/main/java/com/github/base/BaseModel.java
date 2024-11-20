@@ -13,8 +13,8 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseModel<T extends Serializable>{
+public class BaseModel<ID extends Serializable>{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private T id;
+    private ID id;
 }
