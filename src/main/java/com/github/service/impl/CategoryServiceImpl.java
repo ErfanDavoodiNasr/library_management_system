@@ -1,6 +1,6 @@
 package com.github.service.impl;
 
-import com.github.base.BaseServiceImpl;
+import com.github.base.service.BaseServiceImpl;
 import com.github.model.Category;
 import com.github.repository.CategoryRepository;
 import com.github.service.CategoryService;

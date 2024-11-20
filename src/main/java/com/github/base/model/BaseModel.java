@@ -1,4 +1,4 @@
-package com.github.base;
+package com.github.base.model;
 
 
 import lombok.AllArgsConstructor;

@@ -1,14 +1,16 @@
 package com.github.model;
 
-import com.github.base.BaseModel;
+import com.github.base.model.BaseModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @SuperBuilder
 @Data
@@ -24,4 +26,12 @@ public class Subject extends BaseModel<Integer>  implements Serializable {
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> books;
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "id='" + getId() + '\'' +
+                "title='" + title + '\'' +
+                '}';
+    }
 }

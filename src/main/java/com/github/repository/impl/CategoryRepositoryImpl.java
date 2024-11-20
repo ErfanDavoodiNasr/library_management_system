@@ -1,8 +1,7 @@
 package com.github.repository.impl;
 
-import com.github.base.BaseRepositoryImpl;
+import com.github.base.repository.BaseRepositoryImpl;
 import com.github.model.Category;
-import com.github.model.Subject;
 import com.github.repository.CategoryRepository;
 
 import javax.persistence.EntityManager;

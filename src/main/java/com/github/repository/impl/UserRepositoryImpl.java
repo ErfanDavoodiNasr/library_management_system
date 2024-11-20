@@ -1,11 +1,10 @@
 package com.github.repository.impl;
 
-import com.github.base.BaseRepositoryImpl;
+import com.github.base.repository.BaseRepositoryImpl;
 import com.github.model.User;
 import com.github.repository.UserRepository;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
 

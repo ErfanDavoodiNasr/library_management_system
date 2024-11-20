@@ -1,6 +1,6 @@
 package com.github.repository.impl;
 
-import com.github.base.BaseRepositoryImpl;
+import com.github.base.repository.BaseRepositoryImpl;
 import com.github.model.Book;
 import com.github.repository.BookRepository;
 import javax.persistence.EntityManager;

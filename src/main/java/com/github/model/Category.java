@@ -1,6 +1,6 @@
 package com.github.model;
 
-import com.github.base.BaseModel;
+import com.github.base.model.BaseModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

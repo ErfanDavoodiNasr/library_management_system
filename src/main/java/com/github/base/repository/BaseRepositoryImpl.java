@@ -1,5 +1,7 @@
-package com.github.base;
+package com.github.base.repository;
 
+
+import com.github.base.model.BaseModel;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;

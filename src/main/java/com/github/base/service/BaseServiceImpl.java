@@ -1,4 +1,7 @@
-package com.github.base;
+package com.github.base.service;
+
+import com.github.base.model.BaseModel;
+import com.github.base.repository.BaseRepository;
 
 import java.io.Serializable;
 import java.util.List;
