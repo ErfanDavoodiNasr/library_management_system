@@ -20,11 +20,11 @@ import java.util.List;
 public class Subject extends BaseModel<Integer>  implements Serializable {
     private String title;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "subject",fetch = FetchType.LAZY)
     private List<Book> books;
 
     @Override

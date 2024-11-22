@@ -26,7 +26,7 @@ public class User extends BaseModel<Integer> implements Serializable {
     @Builder.Default
     private LocalDateTime joined = LocalDateTime.now();
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "j_user_books",
             joinColumns = @JoinColumn(name = "user_id"),
