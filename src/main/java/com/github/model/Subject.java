@@ -24,7 +24,7 @@ public class Subject extends BaseModel<Integer>  implements Serializable {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany(mappedBy = "subject",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "subject",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     private List<Book> books;
 
     @Override

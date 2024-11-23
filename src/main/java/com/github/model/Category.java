@@ -15,5 +15,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Table(name = "categories")
 public class Category extends BaseModel<Integer>  implements Serializable {
+
+    @OneToOne(mappedBy = "category",cascade = CascadeType.REMOVE)
+    private Subject subject;
+
+
     private String title;
 }
