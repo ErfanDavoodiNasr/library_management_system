@@ -1,0 +1,145 @@
+Index: src/main/java/com/github/ui/LoginPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.github.ui;\n\nimport com.github.model.User;\nimport com.github.util.ApplicationContext;\n\nimport javax.persistence.NoResultException;\n\nimport static com.github.util.Help.input;\n\npublic class LoginPage {\n    public static void login() {\n        while (true) {\n            String enteredPhoneNumber = input(\"enter your number(09114905929): \");\n            User user = null;\n            try {\n                user = ApplicationContext.getUs().findByPhoneNUmber(enteredPhoneNumber);\n            } catch (NoResultException nre) {\n                System.out.println(\"your phone number not found!!\");\n                continue;\n            }\n            switch (user.getRole()) {\n                case USER -> UserPage.run();\n                case ADMIN -> AdminPage.run();\n            }\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/github/ui/LoginPage.java b/src/main/java/com/github/ui/LoginPage.java
+--- a/src/main/java/com/github/ui/LoginPage.java	(revision 513a827d06a920ec1865fdd83e27cd7ec0f10bdf)
++++ b/src/main/java/com/github/ui/LoginPage.java	(date 1732972911447)
+@@ -2,6 +2,7 @@
+ 
+ import com.github.model.User;
+ import com.github.util.ApplicationContext;
++import com.github.util.SecurityContext;
+ 
+ import javax.persistence.NoResultException;
+ 
+@@ -18,6 +19,7 @@
+                 System.out.println("your phone number not found!!");
+                 continue;
+             }
++            SecurityContext.setUser(user);
+             switch (user.getRole()) {
+                 case USER -> UserPage.run();
+                 case ADMIN -> AdminPage.run();
+Index: src/main/java/com/github/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.github;\n\n\npublic class Main {\n    public static void main(String[] args) {\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/github/Main.java b/src/main/java/com/github/Main.java
+--- a/src/main/java/com/github/Main.java	(revision 513a827d06a920ec1865fdd83e27cd7ec0f10bdf)
++++ b/src/main/java/com/github/Main.java	(date 1732972195405)
+@@ -1,7 +1,9 @@
+ package com.github;
+ 
++import com.github.ui.LoginPage;
+ 
+ public class Main {
+     public static void main(String[] args) {
++        LoginPage.login();
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5986c065-4308-4b1c-98b0-b262c3f19bc0\" name=\"Changes\" comment=\"make project clean\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/github/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/github/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/github/model/User.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/github/model/User.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/github/service/UserService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/github/service/UserService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;ErfanDavoodiNasr&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/ErfanDavoodiNasr/library_management_system.git&quot;,\n    &quot;accountId&quot;: &quot;87914d37-2b1f-4fb5-93d9-a2bd2ad6b95f&quot;\n  }\n}</component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2pFCCXTQta4mXYPGCXdiKbuDyE1\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.Main.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"master\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/home/erfandavoodinasr/Documents/library_management_system\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  },\n  \"keyToStringList\": {\n    \"DatabaseDriversLRU\": [\n      \"postgresql\"\n    ]\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.github.Main\" />\n      <module name=\"library_management_system\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.github.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5986c065-4308-4b1c-98b0-b262c3f19bc0\" name=\"Changes\" comment=\"\" />\n      <created>1732352311303</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1732352311303</updated>\n      <workItem from=\"1732352312324\" duration=\"633000\" />\n      <workItem from=\"1732554372833\" duration=\"74000\" />\n      <workItem from=\"1732554551580\" duration=\"1485000\" />\n      <workItem from=\"1732556423613\" duration=\"1455000\" />\n      <workItem from=\"1732631003446\" duration=\"2330000\" />\n      <workItem from=\"1732696956385\" duration=\"29000\" />\n      <workItem from=\"1732773248300\" duration=\"21000\" />\n      <workItem from=\"1732904333633\" duration=\"15000\" />\n      <workItem from=\"1732969724668\" duration=\"1160000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"make project clean\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1732969925658</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1732969925658</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"fix bugs using cascade\" />\n    <MESSAGE value=\"make project clean\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"make project clean\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 513a827d06a920ec1865fdd83e27cd7ec0f10bdf)
++++ b/.idea/workspace.xml	(date 1732972932564)
+@@ -4,15 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="make project clean">
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta" afterDir="false" />
++    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login page&#10;&#10;add security context set user in it">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/UserService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -22,6 +17,7 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Enum" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -121,7 +117,7 @@
+       <workItem from="1732696956385" duration="29000" />
+       <workItem from="1732773248300" duration="21000" />
+       <workItem from="1732904333633" duration="15000" />
+-      <workItem from="1732969724668" duration="1160000" />
++      <workItem from="1732969724668" duration="3207000" />
+     </task>
+     <task id="LOCAL-00001" summary="make project clean">
+       <option name="closed" value="true" />
+@@ -131,7 +127,39 @@
+       <option name="project" value="LOCAL" />
+       <updated>1732969925658</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="add login page for users">
++      <option name="closed" value="true" />
++      <created>1732971145836</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1732971145836</updated>
++    </task>
++    <task id="LOCAL-00003" summary="edit entities">
++      <option name="closed" value="true" />
++      <created>1732972832433</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1732972832433</updated>
++    </task>
++    <task id="LOCAL-00004" summary="add user page">
++      <option name="closed" value="true" />
++      <created>1732972840226</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1732972840226</updated>
++    </task>
++    <task id="LOCAL-00005" summary="edit login page&#10;&#10;add security context set user in it">
++      <option name="closed" value="true" />
++      <created>1732972911853</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1732972911853</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -140,6 +168,10 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="fix bugs using cascade" />
+     <MESSAGE value="make project clean" />
+-    <option name="LAST_COMMIT_MESSAGE" value="make project clean" />
++    <MESSAGE value="add login page for users" />
++    <MESSAGE value="edit entities" />
++    <MESSAGE value="add user page" />
++    <MESSAGE value="edit login page&#10;&#10;add security context set user in it" />
++    <option name="LAST_COMMIT_MESSAGE" value="edit login page&#10;&#10;add security context set user in it" />
+   </component>
+ </project>
+\ No newline at end of file

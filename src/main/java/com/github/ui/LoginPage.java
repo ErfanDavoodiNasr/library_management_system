@@ -2,6 +2,7 @@ package com.github.ui;
 
 import com.github.model.User;
 import com.github.util.ApplicationContext;
+import com.github.util.SecurityContext;
 
 import javax.persistence.NoResultException;
 
@@ -18,6 +19,7 @@ public class LoginPage {
                 System.out.println("your phone number not found!!");
                 continue;
             }
+            SecurityContext.setUser(user);
             switch (user.getRole()) {
                 case USER -> UserPage.run();
                 case ADMIN -> AdminPage.run();

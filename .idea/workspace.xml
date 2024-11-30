@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="make project clean">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login page&#10;&#10;add security context set user in it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -121,7 +117,7 @@
       <workItem from="1732696956385" duration="29000" />
       <workItem from="1732773248300" duration="21000" />
       <workItem from="1732904333633" duration="15000" />
-      <workItem from="1732969724668" duration="1160000" />
+      <workItem from="1732969724668" duration="3207000" />
     </task>
     <task id="LOCAL-00001" summary="make project clean">
       <option name="closed" value="true" />
@@ -131,7 +127,39 @@
       <option name="project" value="LOCAL" />
       <updated>1732969925658</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add login page for users">
+      <option name="closed" value="true" />
+      <created>1732971145836</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732971145836</updated>
+    </task>
+    <task id="LOCAL-00003" summary="edit entities">
+      <option name="closed" value="true" />
+      <created>1732972832433</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732972832433</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add user page">
+      <option name="closed" value="true" />
+      <created>1732972840226</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732972840226</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edit login page&#10;&#10;add security context set user in it">
+      <option name="closed" value="true" />
+      <created>1732972911853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732972911853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +168,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix bugs using cascade" />
     <MESSAGE value="make project clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="make project clean" />
+    <MESSAGE value="add login page for users" />
+    <MESSAGE value="edit entities" />
+    <MESSAGE value="add user page" />
+    <MESSAGE value="edit login page&#10;&#10;add security context set user in it" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit login page&#10;&#10;add security context set user in it" />
   </component>
 </project>
