@@ -24,6 +24,9 @@ public class User extends BaseModel<Integer> implements Serializable {
 
     private String password;
 
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     @Builder.Default
     private LocalDateTime joined = LocalDateTime.now();
 
