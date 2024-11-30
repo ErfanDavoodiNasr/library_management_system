@@ -33,4 +33,6 @@ public class Book extends BaseModel<Integer> implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private Subject subject;
+
+    private Boolean isAvailable;
 }

@@ -40,4 +40,6 @@ public class User extends BaseModel<Integer> implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    private Boolean borrowedBook;
 }
