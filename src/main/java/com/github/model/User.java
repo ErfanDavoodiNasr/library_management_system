@@ -39,7 +39,8 @@ public class User extends BaseModel<Integer> implements Serializable {
     List<Book> borrowBooks;
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    @Builder.Default
+    private Role role = Role.USER;
 
     private Boolean borrowedBook;
 }

@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login page&#10;&#10;add security context set user in it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/UserPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -59,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/erfandavoodinasr/Documents/library_management_system",
+    "last_opened_file_path": "/home/erfandavoodinasr/Documents/online_shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,7 +123,7 @@
       <workItem from="1732696956385" duration="29000" />
       <workItem from="1732773248300" duration="21000" />
       <workItem from="1732904333633" duration="15000" />
-      <workItem from="1732969724668" duration="3207000" />
+      <workItem from="1732969724668" duration="6755000" />
     </task>
     <task id="LOCAL-00001" summary="make project clean">
       <option name="closed" value="true" />
@@ -159,11 +165,30 @@
       <option name="project" value="LOCAL" />
       <updated>1732972911853</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="edit login page&#10;&#10;add security context set user in it">
+      <option name="closed" value="true" />
+      <created>1732973196642</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732973196642</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix bugs using cascade" />

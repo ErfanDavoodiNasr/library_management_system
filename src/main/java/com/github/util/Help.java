@@ -2,6 +2,7 @@ package com.github.util;
 
 import lombok.experimental.UtilityClass;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
 
 @UtilityClass
@@ -35,5 +36,10 @@ public class Help {
             System.out.println("Invalid input. Please enter a valid number.");
             return null;
         }
+    }
+    public static String generateRandomCode() {
+        SecureRandom random = new SecureRandom();
+        int code = 100_000 + random.nextInt(900_000);
+        return String.valueOf(code);
     }
 }
