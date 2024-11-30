@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.function.Predicate;
 
-public abstract class BaseServiceImpl<T extends BaseModel<ID>,ID extends Serializable,R extends BaseRepository<T,ID>> implements BaseService<T,ID>{
+public abstract class BaseServiceImpl<T extends BaseModel<ID>, ID extends Serializable, R extends BaseRepository<T, ID>> implements BaseService<T, ID> {
     private final R r;
 
     public BaseServiceImpl(R r) {
@@ -16,7 +16,7 @@ public abstract class BaseServiceImpl<T extends BaseModel<ID>,ID extends Seriali
 
     @Override
     public T save(T t) {
-        if (t.equals(null)){
+        if (t.equals(null)) {
             throw new NullPointerException("you can not persist null value");
         }
         return r.save(t);
@@ -24,7 +24,7 @@ public abstract class BaseServiceImpl<T extends BaseModel<ID>,ID extends Seriali
 
     @Override
     public T update(T t) {
-        if (t.equals(null)){
+        if (t.equals(null)) {
             throw new NullPointerException("you can not update null value");
         } else if (t.getId().equals(null)) {
             throw new NullPointerException("id is null");
@@ -39,7 +39,7 @@ public abstract class BaseServiceImpl<T extends BaseModel<ID>,ID extends Seriali
     }
 
     private void isIdValid(ID id) {
-        if (getPredicateId().test(id)){
+        if (getPredicateId().test(id)) {
             throw new IllegalArgumentException("invalid id");
         }
     }
@@ -55,7 +55,7 @@ public abstract class BaseServiceImpl<T extends BaseModel<ID>,ID extends Seriali
     @Override
     public List<T> findAll() {
         List<T> all = r.findAll();
-        if (all.equals(null)){
+        if (all.equals(null)) {
             throw new NullPointerException("there is no data in database");
         }
         return all;

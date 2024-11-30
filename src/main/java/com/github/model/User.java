@@ -3,6 +3,7 @@ package com.github.model;
 import com.github.base.model.BaseModel;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;

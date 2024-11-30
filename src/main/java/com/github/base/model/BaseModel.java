@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseModel<ID extends Serializable>{
+public class BaseModel<ID extends Serializable> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private ID id;

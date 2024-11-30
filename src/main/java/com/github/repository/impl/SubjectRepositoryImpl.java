@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
 
-public class SubjectRepositoryImpl extends BaseRepositoryImpl<Subject,Integer> implements SubjectRepository {
+public class SubjectRepositoryImpl extends BaseRepositoryImpl<Subject, Integer> implements SubjectRepository {
 
     @Override
     public Class<Subject> getEntityclass() {
@@ -18,15 +18,15 @@ public class SubjectRepositoryImpl extends BaseRepositoryImpl<Subject,Integer> i
     @Override
     public Subject update(Subject subject) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             em.getTransaction().begin();
             Subject oldSubject = em.find(getEntityclass(), subject.getId());
             oldSubject.setCategory(subject.getCategory());
             oldSubject.setTitle(subject.getTitle());
             em.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
-        }finally {
+        } finally {
             em.close();
         }
         return subject;

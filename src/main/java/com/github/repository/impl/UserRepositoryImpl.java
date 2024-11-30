@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
 
-public class UserRepositoryImpl extends BaseRepositoryImpl<User,Integer> implements UserRepository {
+public class UserRepositoryImpl extends BaseRepositoryImpl<User, Integer> implements UserRepository {
     @Override
     public Class<User> getEntityclass() {
         return User.class;
@@ -17,7 +17,7 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<User,Integer> impleme
     @Override
     public User update(User user) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             em.getTransaction().begin();
             User oldUser = em.find(getEntityclass(), user.getId());
             oldUser.setLastName(user.getLastName());
@@ -27,9 +27,9 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<User,Integer> impleme
             oldUser.setPassword(user.getPassword());
             oldUser.setBorrowBooks(user.getBorrowBooks());
             em.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
-        }finally {
+        } finally {
             em.close();
         }
         return user;

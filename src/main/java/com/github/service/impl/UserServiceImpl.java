@@ -7,7 +7,7 @@ import com.github.service.UserService;
 
 import java.util.function.Predicate;
 
-public class UserServiceImpl extends BaseServiceImpl<User,Integer, UserRepository> implements UserService {
+public class UserServiceImpl extends BaseServiceImpl<User, Integer, UserRepository> implements UserService {
     public UserServiceImpl(UserRepository userRepository) {
         super(userRepository);
     }

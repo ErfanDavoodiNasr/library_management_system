@@ -13,19 +13,19 @@ import java.util.List;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
 
-public abstract class BaseRepositoryImpl<T extends BaseModel<ID>,ID extends Serializable> implements BaseRepository<T,ID>{
+public abstract class BaseRepositoryImpl<T extends BaseModel<ID>, ID extends Serializable> implements BaseRepository<T, ID> {
     @Override
     public Boolean remove(ID id) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             em.getTransaction().begin();
             T t = em.find(getEntityclass(), id);
             em.remove(t);
             em.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
             return Boolean.FALSE;
-        }finally {
+        } finally {
             em.close();
         }
         return Boolean.TRUE;
@@ -47,11 +47,11 @@ public abstract class BaseRepositoryImpl<T extends BaseModel<ID>,ID extends Seri
     @Override
     public T findById(ID id) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             return em.find(getEntityclass(), id);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             em.close();
         }
         return null;
@@ -60,13 +60,13 @@ public abstract class BaseRepositoryImpl<T extends BaseModel<ID>,ID extends Seri
     @Override
     public T save(T t) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             em.getTransaction().begin();
             em.persist(t);
             em.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
-        }finally {
+        } finally {
             em.close();
         }
         return t;

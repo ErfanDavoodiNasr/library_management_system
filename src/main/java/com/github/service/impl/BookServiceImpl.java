@@ -7,7 +7,7 @@ import com.github.service.BookService;
 
 import java.util.function.Predicate;
 
-public class BookServiceImpl extends BaseServiceImpl<Book,Integer, BookRepository> implements BookService {
+public class BookServiceImpl extends BaseServiceImpl<Book, Integer, BookRepository> implements BookService {
 
     public BookServiceImpl(BookRepository bookRepository) {
         super(bookRepository);

@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
 
-public class CategoryRepositoryImpl extends BaseRepositoryImpl<Category,Integer> implements CategoryRepository {
+public class CategoryRepositoryImpl extends BaseRepositoryImpl<Category, Integer> implements CategoryRepository {
     @Override
     public Class<Category> getEntityclass() {
         return Category.class;
@@ -17,14 +17,14 @@ public class CategoryRepositoryImpl extends BaseRepositoryImpl<Category,Integer>
     @Override
     public Category update(Category category) {
         EntityManager em = getEntityManager();
-        try{
+        try {
             em.getTransaction().begin();
             Category oldCategory = em.find(getEntityclass(), category.getId());
             oldCategory.setTitle(category.getTitle());
             em.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
-        }finally {
+        } finally {
             em.close();
         }
         return category;

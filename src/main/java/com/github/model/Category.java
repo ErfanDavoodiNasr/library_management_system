@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,11 +15,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "categories")
-public class Category extends BaseModel<Integer>  implements Serializable {
+public class Category extends BaseModel<Integer> implements Serializable {
 
-    @OneToOne(mappedBy = "category",cascade = CascadeType.REMOVE)
+    @OneToOne(mappedBy = "category", cascade = CascadeType.REMOVE)
     private Subject subject;
-
 
     private String title;
 }

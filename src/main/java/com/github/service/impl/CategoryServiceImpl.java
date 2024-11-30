@@ -7,7 +7,7 @@ import com.github.service.CategoryService;
 
 import java.util.function.Predicate;
 
-public class CategoryServiceImpl extends BaseServiceImpl<Category,Integer, CategoryRepository> implements CategoryService {
+public class CategoryServiceImpl extends BaseServiceImpl<Category, Integer, CategoryRepository> implements CategoryService {
 
     public CategoryServiceImpl(CategoryRepository categoryRepository) {
         super(categoryRepository);

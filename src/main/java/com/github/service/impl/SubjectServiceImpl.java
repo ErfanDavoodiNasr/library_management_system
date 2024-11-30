@@ -7,7 +7,7 @@ import com.github.service.SubjectService;
 
 import java.util.function.Predicate;
 
-public class SubjectServiceImpl extends BaseServiceImpl<Subject,Integer, SubjectRepository> implements SubjectService {
+public class SubjectServiceImpl extends BaseServiceImpl<Subject, Integer, SubjectRepository> implements SubjectService {
 
     public SubjectServiceImpl(SubjectRepository subjectRepository) {
         super(subjectRepository);
