@@ -31,7 +31,7 @@ public class Book extends BaseModel<Integer> implements Serializable {
 
     private String publisher;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Subject subject;
 
     private Boolean isAvailable;

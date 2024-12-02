@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login page&#10;&#10;add security context set user in it">
+    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/SignupException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/exception/SignupException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/service/impl/BookServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/SignupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/SignupPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ui/UserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,33 +66,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/erfandavoodinasr/Documents/online_shop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/erfandavoodinasr/Documents/library_management_system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.Main" />
       <module name="library_management_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.*" />
+          <option name="PATTERN" value="com.github.exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,7 +130,11 @@
       <workItem from="1732696956385" duration="29000" />
       <workItem from="1732773248300" duration="21000" />
       <workItem from="1732904333633" duration="15000" />
-      <workItem from="1732969724668" duration="6755000" />
+      <workItem from="1732969724668" duration="8022000" />
+      <workItem from="1732982475046" duration="7027000" />
+      <workItem from="1733061634096" duration="2163000" />
+      <workItem from="1733069134667" duration="74000" />
+      <workItem from="1733160472172" duration="4827000" />
     </task>
     <task id="LOCAL-00001" summary="make project clean">
       <option name="closed" value="true" />
@@ -173,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732973196642</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number">
+      <option name="closed" value="true" />
+      <created>1732977281601</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732977281601</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +216,7 @@
     <MESSAGE value="edit entities" />
     <MESSAGE value="add user page" />
     <MESSAGE value="edit login page&#10;&#10;add security context set user in it" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit login page&#10;&#10;add security context set user in it" />
+    <MESSAGE value="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number" />
   </component>
 </project>

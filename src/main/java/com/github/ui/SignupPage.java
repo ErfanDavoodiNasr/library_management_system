@@ -1,6 +1,6 @@
 package com.github.ui;
 
-import com.github.SignupException;
+import com.github.exception.SignupException;
 import com.github.model.User;
 import com.github.util.ApplicationContext;
 

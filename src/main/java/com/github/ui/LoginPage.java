@@ -22,13 +22,17 @@ public class LoginPage {
                     user = SignupPage.Signup();
                 }
                 SecurityContext.setUser(user);
-                switch (user.getRole()) {
-                    case USER -> UserPage.run();
-                    case ADMIN -> AdminPage.run();
-                }
+                findRole(user);
             }catch (Exception e){
                 System.out.println(e.getMessage());
             }
+        }
+    }
+
+    private static void findRole(User user) {
+        switch (user.getRole()) {
+            case USER -> UserPage.run();
+            case ADMIN -> AdminPage.run();
         }
     }
 

@@ -30,7 +30,7 @@ public class User extends BaseModel<Integer> implements Serializable {
     @Builder.Default
     private LocalDateTime joined = LocalDateTime.now();
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     @JoinTable(
             name = "j_user_books",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -41,6 +41,4 @@ public class User extends BaseModel<Integer> implements Serializable {
     @Enumerated(EnumType.STRING)
     @Builder.Default
     private Role role = Role.USER;
-
-    private Boolean borrowedBook;
 }

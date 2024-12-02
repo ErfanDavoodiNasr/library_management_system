@@ -60,4 +60,8 @@ public abstract class BaseServiceImpl<T extends BaseModel<ID>, ID extends Serial
         }
         return all;
     }
+
+    public R getR() {
+        return r;
+    }
 }
