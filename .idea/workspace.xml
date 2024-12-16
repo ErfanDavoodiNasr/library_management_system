@@ -4,113 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number">
-      <change afterPath="$PROJECT_DIR$/project/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/api/SendSMS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/base/model/BaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/exception/SignupException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/model/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/SubjectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/util/ApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/util/EntityManagerProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/util/Help.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/util/SecurityContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/github/util/TextColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/honeynimair.89CA3A/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/librarymanagementsystem.7bqPTA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e533d4d1-eff2-4a19-bdac-798322c719bf/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/api/SendSMS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/model/BaseModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/exception/SignupException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/Subject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/BookRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/CategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/SubjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/BookService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/SubjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/BookServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/CategoryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/SubjectServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/AdminPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/Runner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/SignupPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ui/UserPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/ApplicationContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/EntityManagerProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/util/TextColor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+    <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="fix packaging">
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/api/SendSMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/model/BaseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/exception/SignupException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/SubjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/ApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/EntityManagerProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/TextColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/api/SendSMS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/model/BaseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/exception/SignupException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Subject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/SubjectRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/ApplicationContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/EntityManagerProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/Help.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/SecurityContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/TextColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +126,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "web",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/erfandavoodinasr/Documents/library_management_system",
@@ -259,6 +219,7 @@
       <workItem from="1733069134667" duration="74000" />
       <workItem from="1733160472172" duration="4827000" />
       <workItem from="1734356461770" duration="545000" />
+      <workItem from="1734359358159" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="make project clean">
       <option name="closed" value="true" />
@@ -341,6 +302,7 @@
     <MESSAGE value="add user page" />
     <MESSAGE value="edit login page&#10;&#10;add security context set user in it" />
     <MESSAGE value="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit login and signup method&#10;&#10;using phone number for login and send authentication code to phone number" />
+    <MESSAGE value="fix packaging" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix packaging" />
   </component>
 </project>
