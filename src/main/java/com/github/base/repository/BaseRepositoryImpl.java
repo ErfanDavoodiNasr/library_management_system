@@ -50,11 +50,10 @@ public abstract class BaseRepositoryImpl<T extends BaseModel<ID>, ID extends Ser
         try {
             return em.find(getEntityclass(), id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw e;
         } finally {
             em.close();
         }
-        return null;
     }
 
     @Override
@@ -62,13 +61,18 @@ public abstract class BaseRepositoryImpl<T extends BaseModel<ID>, ID extends Ser
         EntityManager em = getEntityManager();
         try {
             em.getTransaction().begin();
-            em.persist(t);
+            if (t.getId() == null) {
+                em.persist(t);
+            } else {
+                em.merge(t);
+            }
             em.getTransaction().commit();
+            return t;
         } catch (Exception e) {
             em.getTransaction().rollback();
+            throw e;
         } finally {
             em.close();
         }
-        return t;
     }
 }

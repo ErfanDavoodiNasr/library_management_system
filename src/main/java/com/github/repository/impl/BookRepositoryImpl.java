@@ -19,28 +19,6 @@ public class BookRepositoryImpl extends BaseRepositoryImpl<Book, Integer> implem
     }
 
     @Override
-    public Book update(Book book) {
-        EntityManager em = getEntityManager();
-        try {
-            em.getTransaction().begin();
-            Book oldBook = em.find(getEntityclass(), book.getId());
-            oldBook.setPublisher(book.getPublisher());
-            oldBook.setWeight(book.getWeight());
-            oldBook.setPrice(book.getPrice());
-            oldBook.setTitle(book.getTitle());
-            oldBook.setSubject(book.getSubject());
-            oldBook.setNumberOfPages(book.getNumberOfPages());
-            oldBook.setAuthorName(book.getAuthorName());
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            em.getTransaction().rollback();
-        } finally {
-            em.close();
-        }
-        return book;
-    }
-
-    @Override
     public List<Book> search(String bookTitle) {
         EntityManager em = getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();

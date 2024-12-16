@@ -5,72 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5986c065-4308-4b1c-98b0-b262c3f19bc0" name="Changes" comment="fix packaging">
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/api/SendSMS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/model/BaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/exception/SignupException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/SubjectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/ApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/EntityManagerProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/Help.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/SecurityContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/util/TextColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/api/SendSMS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/model/BaseModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/repository/BaseRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/base/service/BaseServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/exception/SignupException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/Subject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/BookRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/CategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/SubjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/BookRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/CategoryRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/SubjectRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/repository/impl/UserRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/ApplicationContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/EntityManagerProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/Help.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/SecurityContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/github/util/TextColor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/api/SendSMS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/base/service/BaseServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,27 +61,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/erfandavoodinasr/Documents/library_management_system",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/erfandavoodinasr/Documents/library_management_system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/demo" />
@@ -220,6 +159,7 @@
       <workItem from="1733160472172" duration="4827000" />
       <workItem from="1734356461770" duration="545000" />
       <workItem from="1734359358159" duration="338000" />
+      <workItem from="1734359720866" duration="801000" />
     </task>
     <task id="LOCAL-00001" summary="make project clean">
       <option name="closed" value="true" />
@@ -277,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732977281601</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix packaging">
+      <option name="closed" value="true" />
+      <created>1734359734637</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734359734637</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
