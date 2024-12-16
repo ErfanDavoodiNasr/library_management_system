@@ -37,6 +37,7 @@ public class Help {
             return null;
         }
     }
+
     public static String generateRandomCode() {
         SecureRandom random = new SecureRandom();
         int code = 100_000 + random.nextInt(900_000);

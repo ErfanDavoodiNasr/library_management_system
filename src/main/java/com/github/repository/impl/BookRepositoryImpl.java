@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
 import java.util.List;
 
 import static com.github.util.EntityManagerProvider.getEntityManager;
